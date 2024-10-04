@@ -8,7 +8,9 @@ import {
   useDisclosure,
   Input,
   Divider,
+  Textarea,
 } from "@nextui-org/react";
+import SelectorExperience from "./SelectorExperience";
 
 export default function PersonalInfoModal() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -39,56 +41,36 @@ export default function PersonalInfoModal() {
                 <ModalHeader className="flex flex-col p-0 m-0">
                   Personal Information
                 </ModalHeader>
-                <Input type="text" label="Name" isRequired />
-                <Input type="text" label="Last name" isRequired />
-                <Input type="email" label="Email" isRequired />
-                <Input type="phone" label="Phone" />
-                <Input type="text" label="City" />
+                <div className="flex flex-col gap-3 lg:flex-row lg:gap-3 lg:flex">
+                  <Input type="text" label="Name" isRequired />
+                  <Input type="text" label="Last name" isRequired />
+                </div>
+                <div className="flex flex-col gap-3 lg:flex-row lg:gap-3 lg:flex">
+                  <Input type="email" label="Email" isRequired />
+                  <Input type="phone" label="Phone" />
+                </div>
+                <Input type="text" label="Address" />
 
                 <Divider className="my-4" />
 
                 <ModalHeader className="flex flex-col p-0 m-0">
-                  Personal Information
+                  Description Profile
                 </ModalHeader>
-                <Input type="text" label="Name" isRequired />
-                <Input type="text" label="Last name" isRequired />
-                <Input type="email" label="Email" isRequired />
-                <Input type="phone" label="Phone" />
-                <Input type="text" label="City" />
+                <Textarea label="Description" isRequired size="lg" />
 
                 <Divider className="my-4" />
 
                 <ModalHeader className="flex flex-col p-0 m-0">
-                  Personal Information
+                  Experience
                 </ModalHeader>
-                <Input type="text" label="Name" isRequired />
-                <Input type="text" label="Last name" isRequired />
-                <Input type="email" label="Email" isRequired />
-                <Input type="phone" label="Phone" />
-                <Input type="text" label="City" />
-                <ModalHeader className="flex flex-col p-0 m-0">
-                  Personal Information
-                </ModalHeader>
-                <Input type="text" label="Name" isRequired />
-                <Input type="text" label="Last name" isRequired />
-                <Input type="email" label="Email" isRequired />
-                <Input type="phone" label="Phone" />
-                <Input type="text" label="City" />
-                <ModalHeader className="flex flex-col p-0 m-0">
-                  Personal Information
-                </ModalHeader>
-                <Input type="text" label="Name" isRequired />
-                <Input type="text" label="Last name" isRequired />
-                <Input type="email" label="Email" isRequired />
-                <Input type="phone" label="Phone" />
-                <Input type="text" label="City" />
+                <SelectorExperience />
               </ModalBody>
               <ModalFooter className="flex flex-col">
                 <div className="flex justify-end gap-5">
                   <Button color="danger" variant="light" onPress={onClose}>
                     Close
                   </Button>
-                  <Button color="primary">Next &gt;</Button>
+                  <Button color="primary">Create &gt;</Button>
                 </div>
               </ModalFooter>
             </>
