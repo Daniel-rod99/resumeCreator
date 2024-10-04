@@ -7,7 +7,7 @@ import PersonalInfoModal from "./components/PersonalInfoModal";
 export default function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const saveMode = localStorage.getItem("darkMode");
-    return saveMode === "true"; // Devuelve true o false
+    return saveMode === "true";
   });
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export default function App() {
           </CardBody>
         </Card>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex items-center justify-center">
         <PersonalInfoModal />
       </div>
     </div>
