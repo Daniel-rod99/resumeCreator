@@ -18,7 +18,7 @@ export default function WorkExperienceModal() {
     <motion.div>
       <Button
         radius="full"
-        className="bg-gradient-to-tr from-purple-500 to-indigo-500 text-white shadow-lg"
+        className="text-white shadow-lg bg-gradient-to-tr from-purple-500 to-indigo-500"
         onPress={onOpen}
       >
         Create Resume
